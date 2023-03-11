@@ -3,6 +3,10 @@ const btn = document.getElementById("search-btn");
 const result = document.getElementById("result");
 const sound = document.getElementById("sound");
 
+var dictionary = [];
+localStorage.setItem('dictionary',JSON.stringify(dictionary));
+// line number 6 7 is benificial to run inside the browser console.
+
 btn.addEventListener("click", () => {
     let inputWord = document.getElementById("input-search").value;
     fetch(`${url}${inputWord}`)
