@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mydictionary:history</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styling/history-style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left-panel">
+                <div class="set-image"></div>
+                <h1 id="heading">My Dictionary History</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" name="search-input" id="search-input" placeholder="find in page...">
+                <a href="#target-box"><button type="button" id="btn-history" onclick="findInPage()">Find</button></a>
+            </div>
+        </div>
+        <div id="removeAll" style="display: flex; justify-content: space-between; padding-left: 40px;">
+            <h3 id="find-alert" style="color: red;"></h3>
+            <a href="" onclick="removeAll()" id="remove"></a>
+        </div>
+        <h2 id="message-not-found"></h2>
+        <div class="container-body" id="container-body">
+           <!-- <h2 id="message-not-found"></h2> -->
+        </div>
+    </div>
+    <script src="./validation/history-validation.js"></script>
+</body>
+
+</html>

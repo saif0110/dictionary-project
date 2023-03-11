@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #353434;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    /* font-family: cursive; */
+}
+body{
+    background-color: #353434;
+}
+.container{
+    margin: auto;
+    margin-top: 50px;
+    height: 560px;
+    width: 1000px;
+    background-color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+.left-panel{
+    display: flex;
+} 
+.set-image{
+    height: 150px;
+    width: 150px;
+    background-image: url('../assets/book.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#heading{
+    margin-top: 2rem;
+    color: #353434;
+    font-weight: 1000 !important;
+    /* color: red; */
+}
+#btn-history{
+    background-color: #353434;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: white;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    height: 50px;
+    width: 160px;
+}
+.search-bar{
+    height: 200px;
+    width: 500px;
+    margin-left: 250px;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    /* background-color: red; */
+    /* margin-top: 200px; */
+}
+.search-child{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1em;
+    /* justify-content: space-between; */
+}
+#input-search{
+    width: 350px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #353434;
+
+    /* border-radius: 25px;
+    padding-left: 15px;
+    background-color: #514f4f; */
+    color: #353434;
+    font-size: 16px;
+    font-weight: 500;
+}
+i{
+    color: #353434;
+    font-size: 25px;
+}
+#audio-btn{
+    border: none;
+    outline: none;
+}
+#search-btn{
+    height: 50px;
+    width: 140px;
+    background-color: #353434;
+    color: white;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.word{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.details{
+    display: flex;
+    gap: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.details-para{
+    color: #838080;
+}
+.meaning-example{
+    text-align: left;
+    width: 350px;
+}
+.word-meaning{
+    text-align: left;
+    padding-bottom: 10px;
+}
+.word-example{
+    text-align: left;
+    border-left: 5px solid #8d8a8a;
+    padding-left: 20px;
+    color: #565353;
+}
+#signature{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 185px;
+    margin-left: 860px;
+}

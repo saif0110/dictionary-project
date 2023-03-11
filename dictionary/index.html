@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mydictionary.com</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styling/index-style.css">
+</head>
+<body>
+    <audio id="sound"></audio>
+    <div class="container">
+        <div class="header">
+            <div class="left-panel">
+                <div class="set-image"></div>
+                <h1 id="heading">My Dictionary App</h1>
+            </div>
+            <button type="button" id="btn-history" value="history" onclick="window.open('file:///E:/GitHub%20Projects/dictionary-project/dictionary/history.html', '_blank')">History</button>
+        </div>
+        <div class="search-bar">
+            <h1>Seacrh for new word</h1>
+            <div class="search-child">
+                <form action="" method="post">
+                    <input type="text" id="input-search" name="input-search" placeholder="type to search the meaning...">
+                    <button type="button" id="search-btn">Search</button>
+                </form>
+            </div>
+            <div id="result">
+                
+            </div>
+        </div>
+        <div id="signature">-Mohd Tauheed Khan</div>
+    </div>
+    <script src="./validation/index-validation.js"></script>
+</body>
+</html>
