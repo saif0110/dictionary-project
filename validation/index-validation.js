@@ -3,7 +3,7 @@ const btn = document.getElementById("search-btn");
 const result = document.getElementById("result");
 const sound = document.getElementById("sound");
 
-if(localStorage.length !=0){
+if(localStorage.dictionary == undefined){
     var dictionary = [];
     localStorage.setItem('dictionary',JSON.stringify(dictionary));
 }
