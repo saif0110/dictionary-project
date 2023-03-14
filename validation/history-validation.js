@@ -11,17 +11,15 @@ function deletePerticularbox(event){
     event.target.setAttribute('id','delete-box');
     let detail = document.getElementById('delete-box');
     let delete_word = detail.parentElement.parentElement.parentElement.children[1].children[0].innerHTML;
-    console.log(delete_word); 
     for(let i=0; i<dictionary.length; i++){
-        console.log(dictionary[i].word);
         if(`Word: ${dictionary[i].word}` == delete_word){
-            console.log("case in");
             dictionary.splice(i,1);
             localStorage.setItem('dictionary',JSON.stringify(dictionary));
             detail.parentElement.parentElement.parentElement.remove();
             if(dictionary.length == 0){
                 document.getElementById("message-not-found").innerHTML = "OOps, stack is empty!!";
                 document.getElementById('remove').innerHTML = "";
+                document.getElementById("find-alert").innerHTML = "";
             }
             break;
         }
@@ -51,9 +49,7 @@ function deletePerticularbox(event){
         box_header.setAttribute('class', 'box-header');
         let heading = document.createElement('h3');
         heading.setAttribute('class','heading-word');
-        console.log("line 15");
         let heading_text = document.createTextNode(`Word: ${dictionary[index].word}`);
-        console.log("line 17");
         heading.appendChild(heading_text);
         box_header.appendChild(heading);
         box_parent.appendChild(box_header);
@@ -87,13 +83,15 @@ function deletePerticularbox(event){
 
 ///finding word in page
 function findInPage(){
+    document.getElementById("find-alert").innerHTML = "";
     let header = document.getElementsByClassName('heading-word');
     let search_input = document.getElementById('search-input').value;
     if(search_input != "")
     for(var i=0; i<header.length; i++){
-        console.log(header[i].innerHTML);
-        if(header[i].innerHTML == `Word: ${search_input}`){
-            console.log("matched string");
+        let match1 = header[i].innerHTML;
+        match1 = match1.toLowerCase();
+        let match2 = `Word: ${search_input}`.toLowerCase();
+        if(match1 == match2){
             header[i].parentElement.parentElement.setAttribute('id','target-box');
             document.getElementById("find-alert").innerHTML = "";
             break;

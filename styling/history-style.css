@@ -18,7 +18,6 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
-    /* background-color: red; */
 }
 .left-panel{
     display: flex;
@@ -34,7 +33,6 @@ body{
     margin-top: 2rem;
     color: #353434;
     font-weight: 1000 !important;
-    /* color: red; */
 }
 #btn-history{
     background-color: #353434;
@@ -68,7 +66,6 @@ body{
     flex-wrap: wrap;
     gap: 12px;
     overflow-y: scroll; 
-    /* background-color: red; */
 }
 .box{
     min-height: 300px;
@@ -80,7 +77,6 @@ body{
     font-weight: 600;
     padding-left: 10px;
     color: #474646;
-    /* background-color: green; */
 }
 .box-header{
     padding-top: 0px;
@@ -140,7 +136,6 @@ i{
     animation-name: setBoreder;
     animation-duration: 4s;
     animation-delay: 0s;
-    /* border: 3px solid green; */
 }
 @keyframes setBoreder{
     from{border: 4px solid green;}

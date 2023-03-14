@@ -9,10 +9,11 @@ localStorage.setItem('dictionary',JSON.stringify(dictionary));
 
 btn.addEventListener("click", () => {
     let inputWord = document.getElementById("input-search").value;
+    if(inputWord == '')
+        return 0;
     fetch(`${url}${inputWord}`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             result.innerHTML = `
             <div class="word">
                 <h3 id="found-word">${inputWord}</h3>
@@ -32,6 +33,15 @@ btn.addEventListener("click", () => {
                 ${data[0].meanings[0].definitions[0].example || ""}
                 </p>
             </div>`;
+            let urlmp3 = "";
+            for(let i=0; i<data[0].phonetics.length;i++){
+                if(data[0].phonetics[i].audio != ''){
+                    urlmp3 = data[0].phonetics[i].audio;
+                    break;
+                }
+            }
+            sound.setAttribute('src',urlmp3);
+            inputWord = inputWord.toLowerCase();
             let obj = {
                 "word" : inputWord,
                 "meaning" : data[0].meanings[0].definitions[0].definition,
@@ -41,7 +51,9 @@ btn.addEventListener("click", () => {
             list = JSON.parse(list);
             let flag = false;
             for(let traverse=0; traverse<list.length; traverse++){
-                if(list[traverse].word == inputWord){
+                let localWord = list[traverse].word;
+                localWord = localWord.toLowerCase();
+                if(localWord == inputWord){
                     flag = true;
                     list[traverse].counter += 1;
                     localStorage.setItem('dictionary', JSON.stringify(list));
@@ -56,3 +68,8 @@ btn.addEventListener("click", () => {
             result.innerHTML = `<h2 style="text-align:left">Couldn't find the word</h2>`;
         });
 });
+
+function playSound(){
+    if(sound != '')
+        sound.play();
+}
